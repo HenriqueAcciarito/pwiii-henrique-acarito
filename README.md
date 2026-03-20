@@ -47,7 +47,7 @@ Se você não tiver o PHP e o Composer instalados em sua máquina local, os segu
 macOSWindows PowerShellLinux
 
 ```
-
+/bin/bash -c "$(curl -fsSL https://php.new/install/mac/8.4)"
 ```
 
 Após executar um dos comandos acima, você deve reiniciar a sessão do terminal. Para atualizar o PHP, o Composer e o instalador do Laravel após instalá-los via `npm install` `php.new`, você pode executar o comando novamente no terminal.
@@ -55,7 +55,7 @@ Após executar um dos comandos acima, você deve reiniciar a sessão do terminal
 Se você já tiver o PHP e o Composer instalados, poderá instalar o instalador do Laravel via Composer:
 
 ```
-
+composer global require laravel/installer
 ```
 
 Para uma experiência completa de instalação e gerenciamento de PHP com interface gráfica, confira o [Laravel Herd](https://laravel.com/docs/13.x#installation-using-herd) .
@@ -65,11 +65,13 @@ Para uma experiência completa de instalação e gerenciamento de PHP com interf
 Após instalar o PHP, o Composer e o instalador do Laravel, você estará pronto para criar uma nova aplicação Laravel. O instalador do Laravel solicitará que você selecione sua estrutura de testes, banco de dados e kit inicial preferidos:
 
 ```
-
+laravel new example-app
 ```
 
 Após a criação da aplicação, você pode iniciar o servidor de desenvolvimento local do Laravel, o worker da fila e o servidor de desenvolvimento Vite usando o `dev`script do Composer:
 
 ```
-
+cd example-app
+npm install && npm run build
+composer run dev
 ```
